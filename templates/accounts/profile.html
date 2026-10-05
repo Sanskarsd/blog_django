@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="form-page wrap"><h1>Your profile</h1><form method="post" enctype="multipart/form-data" class="form">{% csrf_token %}{{ user_form.as_p }}{{ profile_form.as_p }}<button class="button">Save changes</button></form><p><a href="{% url 'accounts:password_change' %}">Change password</a></p></section>{% endblock %}
